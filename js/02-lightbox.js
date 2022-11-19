@@ -8,14 +8,17 @@ listGallery.innerHTML = markUp
 function createGal (galleryItems) {
     return galleryItems.map(({preview, original, description})=>{
         return `<a class="gallery__item" href="${original}">
-        <img class="gallery__image" src="${preview}" alt="${description}" />
+        <img class="gallery__image" src="${preview}" alt="${description}"/>
       </a>`
     }).join('')
 }
 const imgs = document.querySelector('.gallery__image')
+
 listGallery.addEventListener('click', modalShow) 
 function modalShow (evt) {
     evt.preventDefault()
-    const lightbox = new SimpleLightbox('.gallery a', {  });
+
+    const lightbox = new SimpleLightbox('.gallery a', {
+        captionDelay: 250,
+        captionsData: `alt`});
 }
-  
