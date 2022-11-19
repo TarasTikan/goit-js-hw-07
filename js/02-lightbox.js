@@ -12,13 +12,8 @@ function createGal (galleryItems) {
       </a>`
     }).join('')
 }
-const imgs = document.querySelector('.gallery__image')
-
-listGallery.addEventListener('click', modalShow) 
-function modalShow (evt) {
-    evt.preventDefault()
 
     const lightbox = new SimpleLightbox('.gallery a', {
         captionDelay: 250,
         captionsData: `alt`});
-}
+
