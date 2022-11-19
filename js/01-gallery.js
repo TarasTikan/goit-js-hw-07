@@ -19,8 +19,8 @@ function createGal (galleryItems) {
 }
 const imgs = document.querySelector('.gallery__image')
 listGallery.addEventListener('click', modalShow) 
-
 function modalShow (evt) {
+    evt.preventDefault()
     if(evt.target.nodeName !== 'IMG') {
         return 
     }
